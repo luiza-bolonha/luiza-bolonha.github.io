@@ -23,6 +23,12 @@
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
