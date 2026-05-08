@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Thesis - Luiza Bolonha</title>
-    <meta name="description" content="Final Thesis case study by Luiza Bolonha: Trie of Rules for Short Text Visualization.">
-    
+    <meta name="description"
+        content="Final Thesis case study by Luiza Bolonha: Trie of Rules for Short Text Visualization.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="style.css?v=1.1">
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -23,7 +28,8 @@
         <div class="nav-content">
             <a href="index.html" class="logo">&lt;Luiza.B/&gt;</a>
             <ul class="nav-links">
-                <li><a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem;"><i class="fas fa-arrow-left"></i> Back to Portfolio</a></li>
+                <li><a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem;"><i
+                            class="fas fa-arrow-left"></i> Back to Portfolio</a></li>
             </ul>
         </div>
     </nav>
@@ -32,49 +38,80 @@
     <section class="section" style="padding-top: 10rem;">
         <div class="section-container">
             <p class="greeting">Case Study: Final Thesis</p>
-            <h1 class="name" style="font-size: 3rem; margin-bottom: 1.5rem;">Trie of Rules for Short Text Visualization</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;"><strong>Universidade Federal do Espírito Santo (UFES) · Grade: 10/10</strong></p>
-            
+            <h1 class="name" style="font-size: 3rem; margin-bottom: 1.5rem;">Trie of Rules for Short Text Visualization
+            </h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;"><strong>Universidade Federal do Espírito Santo (UFES) ·
+                    Grade: 10/10</strong></p>
+
             <div class="project-tags" style="margin-bottom: 3rem;">
                 <span>Python</span><span>spaCy</span><span>NLTK</span><span>NetworkX</span><span>Gephi</span><span>ChatGPT-4</span>
             </div>
-            
+
             <!-- Section 1 -->
             <div class="glass-panel" style="margin-bottom: 2.5rem;">
-                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-search"></i> 1. O Problema e o Contexto</h2>
-                <p>[Insira aqui o contexto do seu TCC. Qual problema você está tentando resolver? Por que analisar e visualizar textos curtos (como notícias e redes sociais) é um desafio?]</p>
-                <p>[Exemplo: Redes sociais geram um volume massivo de textos curtos e ruidosos. O objetivo deste trabalho foi adaptar o método Trie of Rules para... ]</p>
+                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-search"></i> 1. O Problema e o
+                    Contexto</h2>
+                <p>
+                    A era digital produz um volume massivo de textos curtos — postagens em redes sociais, manchetes e
+                    notícias — em velocidade que supera a capacidade humana de analisá-los. Com mais de 5,2 bilhões de
+                    usuários ativos em redes sociais no mundo e o Brasil liderando o ranking de tempo médio diário
+                    nessas plataformas, compreender o que está sendo discutido em tempo real se tornou um desafio
+                    estratégico.
+
+                    Os métodos tradicionais de visualização textual (Nuvem de Palavras, Gráfico de Frequência, Grafo de
+                    Coocorrência e Árvore de Palavras) apresentam limitações importantes: ou não revelam relações
+                    semânticas entre os termos, ou geram estruturas visuais densas e difíceis de interpretar
+                    rapidamente.
+
+                    Este trabalho buscou adaptar o método Trie of Rules — originalmente desenvolvido para visualizar
+                    regras de associação em dados transacionais — para a análise e visualização de textos curtos, como
+                    notícias jornalísticas e postagens no X (antigo Twitter). O objetivo central foi verificar se essa
+                    abordagem pode ser mais eficaz do que os métodos tradicionais, oferecendo ao mesmo tempo uma visão
+                    panorâmica dos dados e a capacidade de exploração interpretativa.</p>
             </div>
 
             <!-- Section 2 -->
             <div class="glass-panel" style="margin-bottom: 2.5rem;">
-                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-code-branch"></i> 2. Arquitetura e Pipeline de NLP</h2>
-                <p>[Explique como você construiu o pipeline de NLP. Detalhe o uso das bibliotecas spaCy e NLTK para tokenização, remoção de stopwords e Extração de Entidades Nomeadas (NER).]</p>
-                <p>[Explique também como os termos foram organizados na estrutura de árvore hierárquica (Trie) para destacar as relações entre as palavras.]</p>
-                
-                <div style="background: rgba(0,0,0,0.3); padding: 3rem; border-radius: 12px; text-align: center; border: 1px dashed rgba(255,255,255,0.2); margin-top: 2rem;">
-                    <i class="fas fa-image" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
-                    <p style="color: var(--text-secondary);">[Espaço reservado: Adicione aqui um diagrama da sua arquitetura/pipeline (usando a tag &lt;img&gt;)]</p>
+                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-code-branch"></i> 2.
+                    Arquitetura e Pipeline de NLP</h2>
+                <p>[Explique como você construiu o pipeline de NLP. Detalhe o uso das bibliotecas spaCy e NLTK para
+                    tokenização, remoção de stopwords e Extração de Entidades Nomeadas (NER).]</p>
+                <p>[Explique também como os termos foram organizados na estrutura de árvore hierárquica (Trie) para
+                    destacar as relações entre as palavras.]</p>
+
+                <div
+                    style="background: rgba(0,0,0,0.3); padding: 3rem; border-radius: 12px; text-align: center; border: 1px dashed rgba(255,255,255,0.2); margin-top: 2rem;">
+                    <i class="fas fa-image"
+                        style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                    <p style="color: var(--text-secondary);">[Espaço reservado: Adicione aqui um diagrama da sua
+                        arquitetura/pipeline (usando a tag &lt;img&gt;)]</p>
                 </div>
             </div>
 
             <!-- Section 3 -->
             <div class="glass-panel" style="margin-bottom: 2.5rem;">
-                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-robot"></i> 3. Integração com IA (ChatGPT-4)</h2>
-                <p>[Descreva como você integrou o LLM (ChatGPT-4) ao projeto. Quais foram os prompts utilizados para gerar resumos automatizados dos clusters identificados nas postagens de redes sociais?]</p>
+                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-robot"></i> 3. Integração com
+                    IA (ChatGPT-4)</h2>
+                <p>[Descreva como você integrou o LLM (ChatGPT-4) ao projeto. Quais foram os prompts utilizados para
+                    gerar resumos automatizados dos clusters identificados nas postagens de redes sociais?]</p>
             </div>
 
             <!-- Section 4 -->
             <div class="glass-panel" style="margin-bottom: 2.5rem;">
-                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-project-diagram"></i> 4. Resultados e Análise Visual (Grafos)</h2>
-                <p>[Insira os resultados obtidos. Fale sobre o uso do Gephi para a visualização gráfica e do NetworkX para a análise estrutural dos clusters.]</p>
-                
-                <div style="background: rgba(0,0,0,0.3); padding: 3rem; border-radius: 12px; text-align: center; border: 1px dashed rgba(255,255,255,0.2); margin-top: 2rem;">
-                    <i class="fas fa-circle-nodes" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
-                    <p style="color: var(--text-secondary);">[Espaço reservado: Adicione aqui as imagens dos grafos gerados no Gephi (usando a tag &lt;img&gt;)]</p>
+                <h2 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-project-diagram"></i> 4.
+                    Resultados e Análise Visual (Grafos)</h2>
+                <p>[Insira os resultados obtidos. Fale sobre o uso do Gephi para a visualização gráfica e do NetworkX
+                    para a análise estrutural dos clusters.]</p>
+
+                <div
+                    style="background: rgba(0,0,0,0.3); padding: 3rem; border-radius: 12px; text-align: center; border: 1px dashed rgba(255,255,255,0.2); margin-top: 2rem;">
+                    <i class="fas fa-circle-nodes"
+                        style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                    <p style="color: var(--text-secondary);">[Espaço reservado: Adicione aqui as imagens dos grafos
+                        gerados no Gephi (usando a tag &lt;img&gt;)]</p>
                 </div>
             </div>
-            
+
             <div style="margin-top: 4rem; text-align: center; margin-bottom: 4rem;">
                 <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Voltar para o Portfólio</a>
             </div>
@@ -82,10 +119,12 @@
     </section>
 
     <!-- Footer -->
-    <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
+    <footer
+        style="text-align: center; padding: 2rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">
         <p>&copy; 2026 Luiza Bolonha. Designed & Coded from scratch.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
